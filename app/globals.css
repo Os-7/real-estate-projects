@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +22,47 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add these styles to your global stylesheet to enhance the design */
+.card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+/* Webkit-based browsers like Chrome, Safari, Edge */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+/* Track of the scrollbar (the part the thumb slides along) */
+.hide-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px; /* Optional rounded corners for track */
+}
+
+/* Thumb of the scrollbar (the draggable part) */
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background: #888; /* Gray color for the thumb */
+  border-radius: 10px; /* Optional rounded corners for thumb */
+}
+
+/* When the user hovers over the scrollbar thumb */
+.hide-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker gray when hovered */
+}
+
+/* For Firefox */
+.hide-scrollbar {
+  scrollbar-width: thin; /* Set the scrollbar to be thinner */
+  scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
 }
